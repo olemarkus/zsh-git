@@ -15,7 +15,7 @@ System wide:
 or just for your user:
   % mkdir -p ~/.zsh/functions
   % cp /zsh-git/functions/* ~/.zsh/functions
-  % echo "fpath=($fpath $HOME/.zsh/func)
+  % echo "fpath=($fpath $HOME/.zsh/functions)
   typeset -U fpath" >> ~/.zshenv
 
 If you want, you can also just clone the repos directly into .zsh/functions or /usr/share/zsh/site-functions
