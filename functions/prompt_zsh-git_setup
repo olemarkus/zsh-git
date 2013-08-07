@@ -143,10 +143,10 @@ prompt_zsh-git_setup() {
 prompt_zsh-git_setinfo() {
 	if zgit_isgit; then
 		prompt_info=
-		prompt_info+="$(prompt_wunjo_scm_status)"
-		prompt_info+=" $(prompt_wunjo_scm_branch)"
+		prompt_info+="$(prompt_wunjo_scm_branch)"
+		prompt_info+=" $(prompt_wunjo_scm_status)"
 		#prompt_info+="%(?.. $pc[rc]exited %1v$pc[reset])"
-		#Rprompt_info+="\$(prompt_wunjo_scm_branch)"
+		#Rprompt_info+="\$(prompt_wunjo_scm_status)"
 		echo -e $prompt_info
     echo -en "\0" 
 	fi
@@ -164,7 +164,7 @@ prompt_wunjo_precmd() {
 	fi
 }
 
-prompt_wunjo_scm_status() {
+prompt_wunjo_scm_branch() {
 	zgit_isgit || return
 	local -A pc
 	pc=(${(kv)wunjo_prompt_colors})
@@ -268,7 +268,7 @@ prompt_wunjo_scm_status() {
 	fi
 }
 
-prompt_wunjo_scm_branch() {
+prompt_wunjo_scm_status() {
 	zgit_isgit || return
 	local -A pc
 	pc=(${(kv)wunjo_prompt_colors})
